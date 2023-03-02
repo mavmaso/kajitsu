@@ -1,0 +1,9 @@
+<div class="container">
+    <p>Share the url or room number with other team members to join the room.</p>
+
+    <%= form_for @changeset, Routes.page_path(@conn, :room), fn _f -> %>
+        <div>
+            <%= submit "Create a new room", class: "bnt" %>
+        </div>
+    <% end %>
+</div>

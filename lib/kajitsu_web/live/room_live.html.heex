@@ -1,0 +1,22 @@
+<h1>ROOM: <%= @room %></h1>
+<p>URL: <a href={Routes.live_path(@socket, __MODULE__, n: @name)}>LINK</a></p> 
+<p>Player: <%= @set %></p>
+<p>Player: <%= @user %></p>
+
+<div>
+  <button class="bnt" phx-click="vote" phx-value-points="0"> 0 </button>
+  <button class="bnt" phx-click="vote" phx-value-points="0.5"> ½ </button>
+  <button class="bnt" phx-click="vote" phx-value-points="1"> 1 </button>
+  <button class="bnt" phx-click="vote" phx-value-points="2"> 2 </button>
+  <button class="bnt" phx-click="vote" phx-value-points="3"> 3 </button>
+  <button class="bnt" phx-click="vote" phx-value-points="5"> 5 </button>
+  <button class="bnt" phx-click="vote" phx-value-points="8"> 8 </button>
+  <button class="bnt" phx-click="vote" phx-value-points="13"> 13</button>
+  <button class="bnt" phx-click="vote" phx-value-points="?"> ? </button>
+</div>
+
+<div>
+  <%= for card <- @cards do %>
+    <p><%= card %></p>
+  <% end %>
+</div>
